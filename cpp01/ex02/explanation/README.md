@@ -43,19 +43,6 @@
 | **ポインタ(アドレス)** | `std::string*` 型 |
 | **参照(別名)** | `std::string&` 型 |
 
-```cpp
-#include <string>
-#include <iostream>
-
-void    print_addresses(const std::string& str, const std::string* ptr, const std::string& ref)
-{
-    // strのアドレスを取得
-    std::cout << "str Address : " << &str << std::endl;
-    // ptrが保持するアドレス（strのアドレス）
-    std::cout << "PTR Address : " << ptr << std::endl;
-    // refのアドレスを取得（strのアドレスと一致）
-    std::cout << "REF Address : " << &ref << std::endl;
-}
 #### ➁ ポインタと参照の「アクセス方法」の違い
 　→アドレスと値を出力する際に、どの演算子を使うか(または使わないか)が重要
 
@@ -117,3 +104,19 @@ $$\text{Value}(\text{str}) = \text{Value}(\text{*stringPTR}) = \text{Value}(\tex
 ※この違いの理解が重要
 　**「ポインタはアドレスを操作するもの」**
 　**「参照は変数を直接操作するための別名」**
+
+4-➀
+```cpp
+#include <string>
+#include <iostream>
+
+void    print_addresses(const std::string& str, const std::string* ptr, const std::string& ref)
+{
+    // strのアドレスを取得
+    std::cout << "str Address : " << &str << std::endl;
+    // ptrが保持するアドレス（strのアドレス）
+    std::cout << "PTR Address : " << ptr << std::endl;
+    // refのアドレスを取得（strのアドレスと一致）
+    std::cout << "REF Address : " << &ref << std::endl;
+}
+
