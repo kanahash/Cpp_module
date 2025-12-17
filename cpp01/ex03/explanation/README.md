@@ -46,15 +46,14 @@
 > ※「不変で必須な関係なら参照、可変で不確実な関係ならポインタ」
 
 ---
-
-### 3．➀ 
 ```cpp
+3．➀ 
 // OK: 初期化リストを使用
 HumanA::HumanA(std::string name, Weapon &weapon) : _name(name), _weapon(weapon) {}
 
 // NG: 参照は宣言と同時に初期化が必要なため、後からの代入は不可
 
-### 3. ➁
+3. ➁
 ```cpp
 void HumanB::setWeapon(Weapon &weapon) {
     this->_weapon = &weapon; // アドレスを保存
