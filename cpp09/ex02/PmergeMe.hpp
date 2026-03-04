@@ -6,7 +6,7 @@
 /*   By: kanahash <kanahash@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 20:52:50 by kanahash          #+#    #+#             */
-/*   Updated: 2026/03/01 20:19:41 by kanahash         ###   ########.fr       */
+/*   Updated: 2026/03/04 19:45:58 by kanahash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,14 @@ class PmergeMe
 	private:
 		std::vector<int> vec;
 		std::deque<int> deq;
+		size_t vecComparisons;
+		size_t deqComparisons;
+
+		struct VecPair
+		{
+		int small;
+		int large;
+		};
 
 	void sortVector(std::vector<int>& arr);
 	void sortDeque(std::deque<int>& arr);
