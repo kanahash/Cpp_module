@@ -33,8 +33,9 @@ class PmergeMe
 
 		struct VecPair
 		{
-		int small;
-		int large;
+			int small;
+			int large;
+			size_t pos;
 		};
 
 	void sortVector(std::vector<int>& arr);
